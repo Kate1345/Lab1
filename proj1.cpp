@@ -14,6 +14,11 @@ int n, m;
 
 void Output(const int n, const int m,  Bi** res)
 {
+    if ((n == 0) || (m == 0))
+    {
+        cout << endl << "You didn't insert valid data" << endl << endl;
+        return;
+    }
     cout << endl;
     cout << "Game matrix (players A in rows, player B in columns)" << endl << endl;
     for (int i = 0; i < n; ++i)
@@ -29,6 +34,11 @@ void Output(const int n, const int m,  Bi** res)
 
 void Pareto(const int n, const int m, Bi** res)
 {
+    if ((n == 0) || (m == 0))
+    {
+        cout << endl << "You didn't insert valid data" << endl << endl;
+        return;
+    }
     cout << endl;
     int max = INT_MIN;
     int** loc_res = new int* [n];
@@ -105,6 +115,11 @@ void Pareto(const int n, const int m, Bi** res)
 
 void Nash_m(const int n, const int m, Bi** res)
 {
+    if ((n == 0) || (m == 0))
+    {
+        cout << endl << "You didn't insert valid data" << endl << endl;
+        return;
+    }
     cout << endl;
     vector <int>* res_j_perB = new vector <int>[n];
     for (int i = 0; i < n; ++i)//per_B
